@@ -1,6 +1,7 @@
 # RedBus - Bus Booking System
 
-A microservices-based bus booking system built with Spring Boot and PostgreSQL.
+Architecture Plan
+https://docs.google.com/document/d/1_mpcazFbCPB8nM-c_hjhbnwDTgyHA6wXv8Cvv75WUk0/edit?usp=sharing
 
 ## Architecture
 
