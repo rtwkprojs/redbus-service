@@ -6,8 +6,6 @@ import com.redbus.agency.dto.VehicleRequestDto;
 import com.redbus.agency.dto.VehicleResponseDto;
 import com.redbus.agency.entity.Agency;
 import com.redbus.agency.entity.Vehicle;
-import com.redbus.agency.mapper.AgencyMapper;
-import com.redbus.agency.mapper.VehicleMapper;
 import com.redbus.agency.repository.AgencyRepository;
 import com.redbus.agency.repository.VehicleRepository;
 import com.redbus.agency.service.AgencyService;
@@ -30,8 +28,42 @@ public class AgencyServiceImpl implements AgencyService {
     
     private final AgencyRepository agencyRepository;
     private final VehicleRepository vehicleRepository;
-    private final AgencyMapper agencyMapper;
-    private final VehicleMapper vehicleMapper;
+    
+    // Simple mapper methods until MapStruct issue is resolved
+    private AgencyResponseDto toAgencyResponseDto(Agency agency) {
+        return AgencyResponseDto.builder()
+                .referenceId(agency.getReferenceId())
+                .agencyName(agency.getAgencyName())
+                .contactEmail(agency.getContactEmail())
+                .contactPhone(agency.getContactPhone())
+                .address(agency.getAddress())
+                .isActive(agency.getIsActive())
+                .ownerReferenceId(agency.getOwnerReferenceId())
+                .vehicleCount(agency.getVehicles() != null ? agency.getVehicles().size() : 0)
+                .createdAt(agency.getCreatedAt())
+                .updatedAt(agency.getUpdatedAt())
+                .build();
+    }
+    
+    private VehicleResponseDto toVehicleResponseDto(Vehicle vehicle) {
+        return VehicleResponseDto.builder()
+                .referenceId(vehicle.getReferenceId())
+                .registrationNumber(vehicle.getRegistrationNumber())
+                .vehicleType(vehicle.getVehicleType())
+                .totalSeats(vehicle.getTotalSeats())
+                .manufacturer(vehicle.getManufacturer())
+                .model(vehicle.getModel())
+                .yearOfManufacture(vehicle.getYearOfManufacture())
+                .isActive(vehicle.getIsActive())
+                .hasAC(vehicle.getHasAC())
+                .hasWifi(vehicle.getHasWifi())
+                .hasChargingPoints(vehicle.getHasChargingPoints())
+                .agencyReferenceId(vehicle.getAgency().getReferenceId())
+                .agencyName(vehicle.getAgency().getAgencyName())
+                .createdAt(vehicle.getCreatedAt())
+                .updatedAt(vehicle.getUpdatedAt())
+                .build();
+    }
     
     @Override
     public AgencyResponseDto createAgency(AgencyRequestDto requestDto, String ownerReferenceId) {
@@ -57,7 +89,7 @@ public class AgencyServiceImpl implements AgencyService {
         agency = agencyRepository.save(agency);
         log.info("Agency created with referenceId: {}", agency.getReferenceId());
         
-        return agencyMapper.toResponseDto(agency);
+        return toAgencyResponseDto(agency);
     }
     
     @Override
@@ -85,7 +117,7 @@ public class AgencyServiceImpl implements AgencyService {
         agency.setAddress(requestDto.getAddress());
         
         agency = agencyRepository.save(agency);
-        return agencyMapper.toResponseDto(agency);
+        return toAgencyResponseDto(agency);
     }
     
     @Override
@@ -96,7 +128,7 @@ public class AgencyServiceImpl implements AgencyService {
         Agency agency = agencyRepository.findByReferenceId(referenceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Agency not found"));
         
-        return agencyMapper.toResponseDto(agency);
+        return toAgencyResponseDto(agency);
     }
     
     @Override
@@ -106,7 +138,7 @@ public class AgencyServiceImpl implements AgencyService {
         
         return agencyRepository.findByOwnerReferenceId(ownerReferenceId)
                 .stream()
-                .map(agencyMapper::toResponseDto)
+                .map(this::toAgencyResponseDto)
                 .collect(Collectors.toList());
     }
     
@@ -117,7 +149,7 @@ public class AgencyServiceImpl implements AgencyService {
         
         return agencyRepository.findByIsActiveTrue()
                 .stream()
-                .map(agencyMapper::toResponseDto)
+                .map(this::toAgencyResponseDto)
                 .collect(Collectors.toList());
     }
     
@@ -181,7 +213,7 @@ public class AgencyServiceImpl implements AgencyService {
         vehicle = vehicleRepository.save(vehicle);
         log.info("Vehicle added with referenceId: {}", vehicle.getReferenceId());
         
-        return vehicleMapper.toResponseDto(vehicle);
+        return toVehicleResponseDto(vehicle);
     }
     
     @Override
@@ -212,7 +244,7 @@ public class AgencyServiceImpl implements AgencyService {
         vehicle.setHasChargingPoints(requestDto.getHasChargingPoints());
         
         vehicle = vehicleRepository.save(vehicle);
-        return vehicleMapper.toResponseDto(vehicle);
+        return toVehicleResponseDto(vehicle);
     }
     
     @Override
@@ -222,7 +254,7 @@ public class AgencyServiceImpl implements AgencyService {
         
         return vehicleRepository.findByAgency_ReferenceId(agencyReferenceId)
                 .stream()
-                .map(vehicleMapper::toResponseDto)
+                .map(this::toVehicleResponseDto)
                 .collect(Collectors.toList());
     }
     
@@ -234,7 +266,7 @@ public class AgencyServiceImpl implements AgencyService {
         Vehicle vehicle = vehicleRepository.findByReferenceId(vehicleReferenceId)
                 .orElseThrow(() -> new ResourceNotFoundException("Vehicle not found"));
         
-        return vehicleMapper.toResponseDto(vehicle);
+        return toVehicleResponseDto(vehicle);
     }
     
     @Override
