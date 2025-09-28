@@ -91,6 +91,7 @@
 - Vehicle management endpoints
 
 ### Task 3.2: Journey Service - Route Management
+**Status:** `completed`  
 **Priority**: P0  
 **Dependencies**: Task 3.1  
 **Description**: Implement route and stop management  

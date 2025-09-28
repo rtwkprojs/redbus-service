@@ -992,3 +992,1144 @@ Correct the classpath of your application so that it contains compatible version
 2025-09-28T12:20:24.857+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-28T12:20:24.862+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-28T12:20:24.866+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T12:28:38.742+05:30  INFO 83745 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 83745 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T12:28:38.743+05:30 DEBUG 83745 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T12:28:38.743+05:30  INFO 83745 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T12:28:39.014+05:30  INFO 83745 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T12:28:39.041+05:30  INFO 83745 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-09-28T12:28:39.222+05:30  INFO 83745 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T12:28:39.228+05:30  INFO 83745 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T12:28:39.229+05:30  INFO 83745 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T12:28:39.253+05:30  INFO 83745 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T12:28:39.253+05:30  INFO 83745 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2025-09-28T12:28:39.324+05:30  INFO 83745 --- [journey-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T12:28:39.357+05:30  INFO 83745 --- [journey-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28T12:28:39.374+05:30  INFO 83745 --- [journey-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T12:28:39.495+05:30  INFO 83745 --- [journey-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T12:28:39.509+05:30  INFO 83745 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T12:28:39.628+05:30  INFO 83745 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c9e8a67
+2025-09-28T12:28:39.629+05:30  INFO 83745 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T12:28:39.656+05:30  WARN 83745 --- [journey-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T12:28:39.669+05:30  INFO 83745 --- [journey-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28T12:28:39.672+05:30 DEBUG 83745 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2c16677c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@27d73d22)
+2025-09-28T12:28:39.672+05:30 DEBUG 83745 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7fd751de) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e162a35)
+2025-09-28T12:28:40.153+05:30  INFO 83745 --- [journey-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T12:28:40.160+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-09-28T12:28:40.162+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       drop constraint if exists FK42eje5dvqvqfq318n8x9lf5xw
+2025-09-28T12:28:40.178+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FK63y33daxb1qs5nbnkuicbpkej
+2025-09-28T12:28:40.184+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FKjmssq6w9xpsvupp2x407s43i2
+2025-09-28T12:28:40.189+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       drop constraint if exists FK9o9a4w8me71q9sh9qnn5uh9y4
+2025-09-28T12:28:40.193+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists journeys cascade
+2025-09-28T12:28:40.209+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists route_stops cascade
+2025-09-28T12:28:40.211+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists routes cascade
+2025-09-28T12:28:40.214+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists seat_inventory cascade
+2025-09-28T12:28:40.216+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists stops cascade
+2025-09-28T12:28:40.221+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table journeys (
+        available_seats integer not null,
+        base_fare float(53) not null,
+        is_active boolean not null,
+        total_seats integer not null,
+        arrival_time timestamp(6) not null,
+        created_at timestamp(6) not null,
+        departure_time timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        journey_code varchar(20) not null unique,
+        journey_status varchar(20) not null check (journey_status in ('SCHEDULED','BOARDING','DEPARTED','IN_TRANSIT','ARRIVED','COMPLETED','CANCELLED','DELAYED')),
+        amenities varchar(500),
+        vehicle_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:28:40.234+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table route_stops (
+        arrival_time_offset_minutes integer not null,
+        departure_time_offset_minutes integer not null,
+        distance_from_previous_km integer,
+        fare_from_origin float(53),
+        is_boarding_point boolean not null,
+        is_dropping_point boolean not null,
+        stop_sequence integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        stop_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        primary key (id),
+        unique (route_id, stop_sequence)
+    )
+2025-09-28T12:28:40.239+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table routes (
+        base_fare float(53) not null,
+        distance_km integer not null,
+        estimated_duration_minutes integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        destination_city varchar(100) not null,
+        source_city varchar(100) not null,
+        route_name varchar(200) not null,
+        agency_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:28:40.245+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table seat_inventory (
+        fare_multiplier float(53) not null,
+        is_available boolean not null,
+        is_ladies_seat boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        journey_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        seat_number varchar(10) not null,
+        reference_id uuid not null unique,
+        seat_type varchar(20) not null check (seat_type in ('LOWER','UPPER','SEATER','SLEEPER','SEMI_SLEEPER')),
+        booking_reference_id varchar(255),
+        primary key (id),
+        unique (journey_id, seat_number)
+    )
+2025-09-28T12:28:40.251+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table stops (
+        is_active boolean not null,
+        latitude float(53),
+        longitude float(53),
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        city varchar(100) not null,
+        landmark varchar(100),
+        state varchar(100) not null,
+        stop_name varchar(100) not null,
+        address varchar(200),
+        primary key (id)
+    )
+2025-09-28T12:28:40.255+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       add constraint FK42eje5dvqvqfq318n8x9lf5xw 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:28:40.258+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FK63y33daxb1qs5nbnkuicbpkej 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:28:40.260+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FKjmssq6w9xpsvupp2x407s43i2 
+       foreign key (stop_id) 
+       references stops
+2025-09-28T12:28:40.261+05:30 DEBUG 83745 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       add constraint FK9o9a4w8me71q9sh9qnn5uh9y4 
+       foreign key (journey_id) 
+       references journeys
+2025-09-28T12:28:40.264+05:30  INFO 83745 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:28:40.408+05:30  INFO 83745 --- [journey-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T12:28:40.761+05:30  WARN 83745 --- [journey-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T12:28:40.807+05:30 DEBUG 83745 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 25 mappings in 'requestMappingHandlerMapping'
+2025-09-28T12:28:40.843+05:30 DEBUG 83745 --- [journey-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-28T12:28:40.856+05:30 DEBUG 83745 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-28T12:28:40.879+05:30 DEBUG 83745 --- [journey-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-28T12:28:40.935+05:30  INFO 83745 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-09-28T12:28:40.940+05:30  INFO 83745 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Started JourneyServiceApplication in 2.394 seconds (process running for 2.535)
+2025-09-28T12:29:01.750+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28T12:29:01.750+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-28T12:29:01.750+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-28T12:29:01.751+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-28T12:29:01.751+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-28T12:29:01.751+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6f798e5a
+2025-09-28T12:29:01.751+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2e6fa551
+2025-09-28T12:29:01.751+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-28T12:29:01.751+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-28T12:29:01.755+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/journeys", parameters={}
+2025-09-28T12:29:01.763+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#createJourney(JourneyRequestDto)
+2025-09-28T12:29:01.809+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [JourneyRequestDto(routeReferenceId=2a8fb8ed-0784-42f0-9718-752330f18ade, vehicleReferenceId=dbac42fe (truncated)...]
+2025-09-28T12:29:01.827+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-1] c.r.j.controller.JourneyController       : Creating journey for route: 2a8fb8ed-0784-42f0-9718-752330f18ade
+2025-09-28T12:29:01.833+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-1] c.r.j.service.impl.JourneyServiceImpl    : Creating journey for route: 2a8fb8ed-0784-42f0-9718-752330f18ade on 2025-10-01T08:00
+2025-09-28T12:29:01.867+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.reference_id=?
+2025-09-28T12:29:01.885+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.redbus.common.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, HttpServletRequest)
+2025-09-28T12:29:01.885+05:30 ERROR 83745 --- [journey-service] [http-nio-8083-exec-1] c.r.c.exception.GlobalExceptionHandler   : Resource not found: Route not found
+2025-09-28T12:29:01.894+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:29:01.895+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=Route not found, data=null, error=ErrorDetails(code=RESOURCE_NOT_ (truncated)...]
+2025-09-28T12:29:01.900+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.redbus.common.exception.ResourceNotFoundException: Route not found]
+2025-09-28T12:29:01.901+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-28T12:29:09.777+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/routes", parameters={}
+2025-09-28T12:29:09.778+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.RouteController#createRoute(RouteRequestDto)
+2025-09-28T12:29:09.784+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RouteRequestDto(routeName=Mumbai-Pune Express, sourceCity=Mumbai, destinationCity=Pune, distanceKm=1 (truncated)...]
+2025-09-28T12:29:09.789+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-2] c.r.journey.controller.RouteController   : Creating route: Mumbai-Pune Express
+2025-09-28T12:29:09.790+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-2] c.r.j.service.impl.RouteServiceImpl      : Creating route: Mumbai-Pune Express for agency: 47d9d5ef-2263-478a-9281-46f640f461ee
+2025-09-28T12:29:09.792+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.id 
+    from
+        routes r1_0 
+    where
+        r1_0.route_name=? 
+        and r1_0.agency_reference_id=? 
+    fetch
+        first ? rows only
+2025-09-28T12:29:09.812+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        routes
+        (agency_reference_id, base_fare, created_at, destination_city, distance_km, estimated_duration_minutes, is_active, reference_id, route_name, source_city, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:29:09.820+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-2] c.r.j.service.impl.RouteServiceImpl      : Route created with referenceId: 7a4fee74-839c-46ce-940b-542d23064d27
+2025-09-28T12:29:09.830+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:29:09.833+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Route created successfully, data=RouteResponseDto(referenceId=7a4f (truncated)...]
+2025-09-28T12:29:09.837+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-28T12:29:16.417+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/journeys", parameters={}
+2025-09-28T12:29:16.418+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#createJourney(JourneyRequestDto)
+2025-09-28T12:29:16.418+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [JourneyRequestDto(routeReferenceId=7a4fee74-839c-46ce-940b-542d23064d27, vehicleReferenceId=dbac42fe (truncated)...]
+2025-09-28T12:29:16.419+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-4] c.r.j.controller.JourneyController       : Creating journey for route: 7a4fee74-839c-46ce-940b-542d23064d27
+2025-09-28T12:29:16.420+05:30  INFO 83745 --- [journey-service] [http-nio-8083-exec-4] c.r.j.service.impl.JourneyServiceImpl    : Creating journey for route: 7a4fee74-839c-46ce-940b-542d23064d27 on 2025-10-01T08:00
+2025-09-28T12:29:16.421+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.reference_id=?
+2025-09-28T12:29:16.428+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    select
+        j1_0.id,
+        j1_0.amenities,
+        j1_0.arrival_time,
+        j1_0.available_seats,
+        j1_0.base_fare,
+        j1_0.created_at,
+        j1_0.departure_time,
+        j1_0.is_active,
+        j1_0.journey_code,
+        j1_0.journey_status,
+        j1_0.reference_id,
+        j1_0.route_id,
+        j1_0.total_seats,
+        j1_0.updated_at,
+        j1_0.vehicle_reference_id,
+        j1_0.version 
+    from
+        journeys j1_0 
+    where
+        j1_0.vehicle_reference_id=? 
+        and j1_0.departure_time between ? and ?
+2025-09-28T12:29:16.433+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        journeys
+        (amenities, arrival_time, available_seats, base_fare, created_at, departure_time, is_active, journey_code, journey_status, reference_id, route_id, total_seats, updated_at, vehicle_reference_id, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:29:16.437+05:30  WARN 83745 --- [journey-service] [http-nio-8083-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 22001
+2025-09-28T12:29:16.437+05:30 ERROR 83745 --- [journey-service] [http-nio-8083-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: value too long for type character varying(20)
+2025-09-28T12:29:16.442+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.redbus.common.exception.GlobalExceptionHandler#handleGlobalException(Exception, HttpServletRequest)
+2025-09-28T12:29:16.442+05:30 ERROR 83745 --- [journey-service] [http-nio-8083-exec-4] c.r.c.exception.GlobalExceptionHandler   : Unexpected error occurred
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: value too long for type character varying(20)] [insert into journeys (amenities,arrival_time,available_seats,base_fare,created_at,departure_time,is_active,journey_code,journey_status,reference_id,route_id,total_seats,updated_at,vehicle_reference_id,version) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into journeys (amenities,arrival_time,available_seats,base_fare,created_at,departure_time,is_active,journey_code,journey_status,reference_id,route_id,total_seats,updated_at,vehicle_reference_id,version) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:297) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.4.10.jar:3.4.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.11.jar:6.2.11]
+	at jdk.proxy2/jdk.proxy2.$Proxy142.save(Unknown Source) ~[na:na]
+	at com.redbus.journey.service.impl.JourneyServiceImpl.createJourney(JourneyServiceImpl.java:77) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at com.redbus.journey.service.impl.JourneyServiceImpl$$SpringCGLIB$$0.createJourney(<generated>) ~[classes/:na]
+	at com.redbus.journey.controller.JourneyController.createJourney(JourneyController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: org.hibernate.exception.DataException: could not execute statement [ERROR: value too long for type character varying(20)] [insert into journeys (amenities,arrival_time,available_seats,base_fare,created_at,departure_time,is_active,journey_code,journey_status,reference_id,route_id,total_seats,updated_at,vehicle_reference_id,version) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:103) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.saveTransientEntity(DefaultMergeEventListener.java:384) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:305) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:217) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:152) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:136) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:89) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:854) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:840) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364) ~[spring-orm-6.2.11.jar:6.2.11]
+	at jdk.proxy2/jdk.proxy2.$Proxy137.merge(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320) ~[spring-orm-6.2.11.jar:6.2.11]
+	at jdk.proxy2/jdk.proxy2.$Proxy137.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:639) ~[spring-data-jpa-3.4.10.jar:3.4.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:731) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.4.10.jar:3.4.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.11.jar:6.2.11]
+	... 69 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(20)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	... 127 common frames omitted
+
+2025-09-28T12:29:16.446+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:29:16.446+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=Internal server error, data=null, error=ErrorDetails(code=INTERNA (truncated)...]
+2025-09-28T12:29:16.446+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: value too long for type character varying(20)] [insert into journeys (amenities,arrival_time,available_seats,base_fare,created_at,departure_time,is_active,journey_code,journey_status,reference_id,route_id,total_seats,updated_at,vehicle_reference_id,version) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into journeys (amenities,arrival_time,available_seats,base_fare,created_at,departure_time,is_active,journey_code,journey_status,reference_id,route_id,total_seats,updated_at,vehicle_reference_id,version) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]]
+2025-09-28T12:29:16.446+05:30 DEBUG 83745 --- [journey-service] [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-09-28T12:29:49.760+05:30  INFO 83745 --- [journey-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-28T12:29:49.763+05:30  INFO 83745 --- [journey-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-28T12:29:49.765+05:30  INFO 83745 --- [journey-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:29:49.766+05:30  INFO 83745 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T12:29:49.767+05:30  INFO 83745 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T12:29:57.744+05:30  INFO 86403 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 86403 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T12:29:57.745+05:30 DEBUG 86403 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T12:29:57.745+05:30  INFO 86403 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T12:29:57.999+05:30  INFO 86403 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T12:29:58.028+05:30  INFO 86403 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-09-28T12:29:58.210+05:30  INFO 86403 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T12:29:58.216+05:30  INFO 86403 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T12:29:58.216+05:30  INFO 86403 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T12:29:58.238+05:30  INFO 86403 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T12:29:58.238+05:30  INFO 86403 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 477 ms
+2025-09-28T12:29:58.308+05:30  INFO 86403 --- [journey-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T12:29:58.342+05:30  INFO 86403 --- [journey-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28T12:29:58.355+05:30  INFO 86403 --- [journey-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T12:29:58.464+05:30  INFO 86403 --- [journey-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T12:29:58.476+05:30  INFO 86403 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T12:29:58.572+05:30  INFO 86403 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fcaea93
+2025-09-28T12:29:58.573+05:30  INFO 86403 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T12:29:58.593+05:30  WARN 86403 --- [journey-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T12:29:58.603+05:30  INFO 86403 --- [journey-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28T12:29:58.606+05:30 DEBUG 86403 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@45571cfc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@faec277)
+2025-09-28T12:29:58.606+05:30 DEBUG 86403 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b475663) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1669931a)
+2025-09-28T12:29:59.069+05:30  INFO 86403 --- [journey-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T12:29:59.075+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-09-28T12:29:59.078+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       drop constraint if exists FK42eje5dvqvqfq318n8x9lf5xw
+2025-09-28T12:29:59.085+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FK63y33daxb1qs5nbnkuicbpkej
+2025-09-28T12:29:59.088+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FKjmssq6w9xpsvupp2x407s43i2
+2025-09-28T12:29:59.090+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       drop constraint if exists FK9o9a4w8me71q9sh9qnn5uh9y4
+2025-09-28T12:29:59.094+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists journeys cascade
+2025-09-28T12:29:59.102+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists route_stops cascade
+2025-09-28T12:29:59.107+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists routes cascade
+2025-09-28T12:29:59.112+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists seat_inventory cascade
+2025-09-28T12:29:59.116+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists stops cascade
+2025-09-28T12:29:59.122+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table journeys (
+        available_seats integer not null,
+        base_fare float(53) not null,
+        is_active boolean not null,
+        total_seats integer not null,
+        arrival_time timestamp(6) not null,
+        created_at timestamp(6) not null,
+        departure_time timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        journey_code varchar(20) not null unique,
+        journey_status varchar(20) not null check (journey_status in ('SCHEDULED','BOARDING','DEPARTED','IN_TRANSIT','ARRIVED','COMPLETED','CANCELLED','DELAYED')),
+        amenities varchar(500),
+        vehicle_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:29:59.138+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table route_stops (
+        arrival_time_offset_minutes integer not null,
+        departure_time_offset_minutes integer not null,
+        distance_from_previous_km integer,
+        fare_from_origin float(53),
+        is_boarding_point boolean not null,
+        is_dropping_point boolean not null,
+        stop_sequence integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        stop_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        primary key (id),
+        unique (route_id, stop_sequence)
+    )
+2025-09-28T12:29:59.143+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table routes (
+        base_fare float(53) not null,
+        distance_km integer not null,
+        estimated_duration_minutes integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        destination_city varchar(100) not null,
+        source_city varchar(100) not null,
+        route_name varchar(200) not null,
+        agency_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:29:59.148+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table seat_inventory (
+        fare_multiplier float(53) not null,
+        is_available boolean not null,
+        is_ladies_seat boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        journey_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        seat_number varchar(10) not null,
+        reference_id uuid not null unique,
+        seat_type varchar(20) not null check (seat_type in ('LOWER','UPPER','SEATER','SLEEPER','SEMI_SLEEPER')),
+        booking_reference_id varchar(255),
+        primary key (id),
+        unique (journey_id, seat_number)
+    )
+2025-09-28T12:29:59.154+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table stops (
+        is_active boolean not null,
+        latitude float(53),
+        longitude float(53),
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        city varchar(100) not null,
+        landmark varchar(100),
+        state varchar(100) not null,
+        stop_name varchar(100) not null,
+        address varchar(200),
+        primary key (id)
+    )
+2025-09-28T12:29:59.159+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       add constraint FK42eje5dvqvqfq318n8x9lf5xw 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:29:59.161+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FK63y33daxb1qs5nbnkuicbpkej 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:29:59.163+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FKjmssq6w9xpsvupp2x407s43i2 
+       foreign key (stop_id) 
+       references stops
+2025-09-28T12:29:59.164+05:30 DEBUG 86403 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       add constraint FK9o9a4w8me71q9sh9qnn5uh9y4 
+       foreign key (journey_id) 
+       references journeys
+2025-09-28T12:29:59.168+05:30  INFO 86403 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:29:59.303+05:30  INFO 86403 --- [journey-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T12:29:59.656+05:30  WARN 86403 --- [journey-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T12:29:59.699+05:30 DEBUG 86403 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 25 mappings in 'requestMappingHandlerMapping'
+2025-09-28T12:29:59.734+05:30 DEBUG 86403 --- [journey-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-28T12:29:59.747+05:30 DEBUG 86403 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-28T12:29:59.767+05:30 DEBUG 86403 --- [journey-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-28T12:29:59.821+05:30  INFO 86403 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-09-28T12:29:59.825+05:30  INFO 86403 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Started JourneyServiceApplication in 2.275 seconds (process running for 2.414)
+2025-09-28T12:30:19.339+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28T12:30:19.340+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-28T12:30:19.340+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-28T12:30:19.340+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-28T12:30:19.340+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-28T12:30:19.340+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@141962b8
+2025-09-28T12:30:19.340+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@21d08148
+2025-09-28T12:30:19.341+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-28T12:30:19.341+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-28T12:30:19.345+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/journeys", parameters={}
+2025-09-28T12:30:19.350+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#createJourney(JourneyRequestDto)
+2025-09-28T12:30:19.400+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [JourneyRequestDto(routeReferenceId=7a4fee74-839c-46ce-940b-542d23064d27, vehicleReferenceId=dbac42fe (truncated)...]
+2025-09-28T12:30:19.419+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-1] c.r.j.controller.JourneyController       : Creating journey for route: 7a4fee74-839c-46ce-940b-542d23064d27
+2025-09-28T12:30:19.423+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-1] c.r.j.service.impl.JourneyServiceImpl    : Creating journey for route: 7a4fee74-839c-46ce-940b-542d23064d27 on 2025-10-01T08:00
+2025-09-28T12:30:19.457+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.reference_id=?
+2025-09-28T12:30:19.477+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.redbus.common.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, HttpServletRequest)
+2025-09-28T12:30:19.478+05:30 ERROR 86403 --- [journey-service] [http-nio-8083-exec-1] c.r.c.exception.GlobalExceptionHandler   : Resource not found: Route not found
+2025-09-28T12:30:19.485+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:30:19.487+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=Route not found, data=null, error=ErrorDetails(code=RESOURCE_NOT_ (truncated)...]
+2025-09-28T12:30:19.491+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.redbus.common.exception.ResourceNotFoundException: Route not found]
+2025-09-28T12:30:19.492+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-09-28T12:30:29.539+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/routes", parameters={}
+2025-09-28T12:30:29.539+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.RouteController#createRoute(RouteRequestDto)
+2025-09-28T12:30:29.544+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RouteRequestDto(routeName=Mumbai-Pune Express, sourceCity=Mumbai, destinationCity=Pune, distanceKm=1 (truncated)...]
+2025-09-28T12:30:29.549+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-2] c.r.journey.controller.RouteController   : Creating route: Mumbai-Pune Express
+2025-09-28T12:30:29.550+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-2] c.r.j.service.impl.RouteServiceImpl      : Creating route: Mumbai-Pune Express for agency: 47d9d5ef-2263-478a-9281-46f640f461ee
+2025-09-28T12:30:29.553+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.id 
+    from
+        routes r1_0 
+    where
+        r1_0.route_name=? 
+        and r1_0.agency_reference_id=? 
+    fetch
+        first ? rows only
+2025-09-28T12:30:29.570+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        routes
+        (agency_reference_id, base_fare, created_at, destination_city, distance_km, estimated_duration_minutes, is_active, reference_id, route_name, source_city, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:29.581+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-2] c.r.j.service.impl.RouteServiceImpl      : Route created with referenceId: 5b75f884-ea93-44cc-a7fa-6aca7aa8e4e2
+2025-09-28T12:30:29.589+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:30:29.591+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Route created successfully, data=RouteResponseDto(referenceId=5b75 (truncated)...]
+2025-09-28T12:30:29.596+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-28T12:30:36.466+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/journeys", parameters={}
+2025-09-28T12:30:36.466+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#createJourney(JourneyRequestDto)
+2025-09-28T12:30:36.466+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [JourneyRequestDto(routeReferenceId=5b75f884-ea93-44cc-a7fa-6aca7aa8e4e2, vehicleReferenceId=dbac42fe (truncated)...]
+2025-09-28T12:30:36.467+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-4] c.r.j.controller.JourneyController       : Creating journey for route: 5b75f884-ea93-44cc-a7fa-6aca7aa8e4e2
+2025-09-28T12:30:36.469+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-4] c.r.j.service.impl.JourneyServiceImpl    : Creating journey for route: 5b75f884-ea93-44cc-a7fa-6aca7aa8e4e2 on 2025-10-01T08:00
+2025-09-28T12:30:36.470+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.reference_id=?
+2025-09-28T12:30:36.475+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    select
+        j1_0.id,
+        j1_0.amenities,
+        j1_0.arrival_time,
+        j1_0.available_seats,
+        j1_0.base_fare,
+        j1_0.created_at,
+        j1_0.departure_time,
+        j1_0.is_active,
+        j1_0.journey_code,
+        j1_0.journey_status,
+        j1_0.reference_id,
+        j1_0.route_id,
+        j1_0.total_seats,
+        j1_0.updated_at,
+        j1_0.vehicle_reference_id,
+        j1_0.version 
+    from
+        journeys j1_0 
+    where
+        j1_0.vehicle_reference_id=? 
+        and j1_0.departure_time between ? and ?
+2025-09-28T12:30:36.480+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        journeys
+        (amenities, arrival_time, available_seats, base_fare, created_at, departure_time, is_active, journey_code, journey_status, reference_id, route_id, total_seats, updated_at, vehicle_reference_id, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.485+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.488+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.490+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.491+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.493+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.495+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.497+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.499+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.501+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.503+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.505+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.507+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.509+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.511+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.513+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.515+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.517+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.518+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.520+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.522+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.524+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.526+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.528+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.529+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.532+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.534+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.535+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.538+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.539+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.541+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.543+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.545+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.546+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.549+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.551+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.553+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.555+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.557+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.559+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.561+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        seat_inventory
+        (booking_reference_id, created_at, fare_multiplier, is_available, is_ladies_seat, journey_id, reference_id, seat_number, seat_type, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:30:36.563+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-4] c.r.j.service.impl.JourneyServiceImpl    : Journey created with code: JRN1001MUCD6F
+2025-09-28T12:30:36.566+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:30:36.570+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Journey created successfully, data=JourneyResponseDto(referenceId= (truncated)...]
+2025-09-28T12:30:36.572+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-28T12:30:42.494+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/journeys/294e34f6-f91d-4351-b1c9-b06473c885f3/seats", parameters={}
+2025-09-28T12:30:42.495+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#getJourneySeatInventory(UUID)
+2025-09-28T12:30:42.495+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-6] c.r.j.controller.JourneyController       : Fetching seat inventory for journey: 294e34f6-f91d-4351-b1c9-b06473c885f3
+2025-09-28T12:30:42.499+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-6] c.r.j.service.impl.JourneyServiceImpl    : Fetching seat inventory for journey: 294e34f6-f91d-4351-b1c9-b06473c885f3
+2025-09-28T12:30:42.500+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] org.hibernate.SQL                        : 
+    select
+        j1_0.id,
+        j1_0.amenities,
+        j1_0.arrival_time,
+        j1_0.available_seats,
+        j1_0.base_fare,
+        j1_0.created_at,
+        j1_0.departure_time,
+        j1_0.is_active,
+        j1_0.journey_code,
+        j1_0.journey_status,
+        j1_0.reference_id,
+        j1_0.route_id,
+        j1_0.total_seats,
+        j1_0.updated_at,
+        j1_0.vehicle_reference_id,
+        j1_0.version 
+    from
+        journeys j1_0 
+    where
+        j1_0.reference_id=?
+2025-09-28T12:30:42.505+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] org.hibernate.SQL                        : 
+    select
+        si1_0.id,
+        si1_0.booking_reference_id,
+        si1_0.created_at,
+        si1_0.fare_multiplier,
+        si1_0.is_available,
+        si1_0.is_ladies_seat,
+        si1_0.journey_id,
+        si1_0.reference_id,
+        si1_0.seat_number,
+        si1_0.seat_type,
+        si1_0.updated_at,
+        si1_0.version 
+    from
+        seat_inventory si1_0 
+    where
+        si1_0.journey_id=? 
+    order by
+        si1_0.seat_number
+2025-09-28T12:30:42.514+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:30:42.514+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=null, data=[SeatInventoryDto(referenceId=4635ef88-5cf7-4f1a-894c-3 (truncated)...]
+2025-09-28T12:30:42.517+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-28T12:30:48.277+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/journeys/search?sourceCity=Mumbai&destinationCity=Pune&travelDate=2025-10-01", parameters={masked}
+2025-09-28T12:30:48.277+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.JourneyController#searchJourneys(String, String, LocalDate)
+2025-09-28T12:30:48.280+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-8] c.r.j.controller.JourneyController       : Searching journeys from Mumbai to Pune on 2025-10-01
+2025-09-28T12:30:48.283+05:30  INFO 86403 --- [journey-service] [http-nio-8083-exec-8] c.r.j.service.impl.JourneyServiceImpl    : Searching journeys from Mumbai to Pune on 2025-10-01
+2025-09-28T12:30:48.288+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] org.hibernate.SQL                        : 
+    select
+        j1_0.id,
+        j1_0.amenities,
+        j1_0.arrival_time,
+        j1_0.available_seats,
+        j1_0.base_fare,
+        j1_0.created_at,
+        j1_0.departure_time,
+        j1_0.is_active,
+        j1_0.journey_code,
+        j1_0.journey_status,
+        j1_0.reference_id,
+        j1_0.route_id,
+        j1_0.total_seats,
+        j1_0.updated_at,
+        j1_0.vehicle_reference_id,
+        j1_0.version 
+    from
+        journeys j1_0 
+    join
+        routes r1_0 
+            on r1_0.id=j1_0.route_id 
+    where
+        r1_0.source_city=? 
+        and r1_0.destination_city=? 
+        and date(j1_0.departure_time)=date(?)
+2025-09-28T12:30:48.294+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.id=?
+2025-09-28T12:30:48.297+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:30:48.298+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=null, data=[JourneyResponseDto(referenceId=294e34f6-f91d-4351-b1c9 (truncated)...]
+2025-09-28T12:30:48.298+05:30 DEBUG 86403 --- [journey-service] [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-28T12:32:05.672+05:30  INFO 86403 --- [journey-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-28T12:32:05.676+05:30  INFO 86403 --- [journey-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-28T12:32:05.677+05:30  INFO 86403 --- [journey-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:32:05.678+05:30  INFO 86403 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T12:32:05.679+05:30  INFO 86403 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
