@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: booking-service
+  
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:redbus}
+    username: ${DB_USERNAME:redbus}
+    password: ${DB_PASSWORD:redbus123}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 10
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+        default_schema: public
+    show-sql: false
+  
+  flyway:
+    enabled: false
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    schemas: public
+    
+server:
+  port: 8085
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_param
+    include-exception: false
+
+journey:
+  service:
+    url: http://localhost:8083
+
+booking:
+  expiry:
+    minutes: 15
+  max-seats-per-booking: 6
+
+logging:
+  level:
+    root: INFO
+    com.redbus.booking: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/booking-service.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
