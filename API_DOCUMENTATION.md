@@ -252,9 +252,96 @@ curl -X GET http://localhost:8081/api/v1/users/{referenceId} \
   -H "Authorization: Bearer <your-jwt-token>"
 ```
 
-## Next Services (To Be Implemented)
+## Agency Service (Port 8082)
 
-- **Agency Service** (Port 8082) - Bus agency and vehicle management
+### Base URL
+```
+http://localhost:8082/api/v1/agencies
+```
+
+### Agency Endpoints
+
+#### 1. Create Agency
+**POST** `/`
+
+Create a new bus agency.
+
+**Request Body:**
+```json
+{
+  "agencyName": "SpeedBus Travels",
+  "contactEmail": "contact@speedbus.com",
+  "contactPhone": "9876543210",
+  "address": "123 Main Street, Mumbai"
+}
+```
+
+#### 2. Update Agency
+**PUT** `/{referenceId}`
+
+#### 3. Get Agency
+**GET** `/{referenceId}`
+
+#### 4. List All Active Agencies
+**GET** `/`
+
+#### 5. Get My Agencies
+**GET** `/my-agencies`
+
+#### 6. Delete Agency
+**DELETE** `/{referenceId}`
+
+#### 7. Activate/Deactivate Agency
+**POST** `/{referenceId}/activate`
+**POST** `/{referenceId}/deactivate`
+
+### Vehicle Endpoints
+
+#### 1. Add Vehicle to Agency
+**POST** `/{agencyReferenceId}/vehicles`
+
+**Request Body:**
+```json
+{
+  "registrationNumber": "MH01AB1234",
+  "vehicleType": "VOLVO",
+  "totalSeats": 40,
+  "manufacturer": "Volvo",
+  "model": "9400 Multi-Axle",
+  "yearOfManufacture": 2022,
+  "hasAC": true,
+  "hasWifi": true,
+  "hasChargingPoints": true
+}
+```
+
+#### 2. Update Vehicle
+**PUT** `/{agencyReferenceId}/vehicles/{vehicleReferenceId}`
+
+#### 3. List Agency Vehicles
+**GET** `/{agencyReferenceId}/vehicles`
+
+#### 4. Get Vehicle
+**GET** `/vehicles/{vehicleReferenceId}`
+
+#### 5. Delete Vehicle
+**DELETE** `/{agencyReferenceId}/vehicles/{vehicleReferenceId}`
+
+#### 6. Activate/Deactivate Vehicle
+**POST** `/{agencyReferenceId}/vehicles/{vehicleReferenceId}/activate`
+**POST** `/{agencyReferenceId}/vehicles/{vehicleReferenceId}/deactivate`
+
+### Vehicle Types
+- `SEATER` - Regular seater bus
+- `SLEEPER` - Sleeper bus
+- `SEMI_SLEEPER` - Semi-sleeper bus
+- `VOLVO` - Volvo bus
+- `AC_SEATER` - AC seater bus
+- `NON_AC_SEATER` - Non-AC seater bus
+- `DELUXE` - Deluxe bus
+- `LUXURY` - Luxury bus
+
+## Next Services (To Be Implemented)
 - **Journey Service** (Port 8083) - Routes, stops, and journey scheduling
 - **Search Service** (Port 8084) - Elasticsearch-based journey search
 - **Booking Service** (Port 8085) - Booking orchestration with seat locking
