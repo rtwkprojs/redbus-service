@@ -139,7 +139,3 @@ mvn clean package -DskipTests
 ```bash
 java -jar target/*.jar --spring.profiles.active=docker
 ```
-
-## License
-
-MIT

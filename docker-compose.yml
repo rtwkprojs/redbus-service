@@ -83,7 +83,7 @@ services:
     build: ./booking-service
     container_name: redbus-booking-service
     ports:
-      - "8084:8084"
+      - "8084:8085"
     environment:
       SPRING_PROFILES_ACTIVE: docker
       DB_HOST: postgres
