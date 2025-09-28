@@ -619,30 +619,3 @@ curl -X POST "http://localhost:8086/api/v1/payments/process" -H "Content-Type: a
 ```bash
 curl -X POST "http://localhost:8086/api/v1/payments/e7e87085-a1f6-49fb-ab08-902382930a6f/refund" -H "Content-Type: application/json" -d '{"refundAmount": 800.0}'
 ```
-
-## Testing Summary
-
-All the above CURL commands have been **successfully tested** on the running microservices. The system includes:
-
-### ✅ Tested Services
-- **User Service (8081)** - Registration, Login, JWT Authentication
-- **Agency Service (8082)** - Agency & Vehicle Management  
-- **Journey Service (8083)** - Routes, Journeys, Seat Management
-- **Booking Service (8084)** - Seat Availability (booking initiation has integration issues)
-- **Payment Service (8086)** - Payment Processing, Refunds
-
-### 🏗️ Architecture Features
-- **PostgreSQL** database on port 5433
-- **BaseEntity** pattern with UUID reference IDs
-- **JWT Authentication** with BCrypt password hashing
-- **Pessimistic locking** for seat booking operations
-- **Docker Compose** deployment
-- **Microservices** architecture with independent scaling
-
-### 🔧 Key Validations
-- **User Registration**: Username patterns, password complexity, email validation
-- **Payment Processing**: Exact amount matching with 0.01 tolerance
-- **Seat Management**: 40 seats auto-generated, ladies seats every 10th seat
-- **Journey Search**: By source/destination cities and travel date
-
-All services are **production-ready** with comprehensive error handling, validation, and consistent API response formats!
