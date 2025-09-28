@@ -321,7 +321,7 @@ public class JourneyServiceImpl implements JourneyService {
         return SeatInventoryDto.builder()
                 .referenceId(seat.getReferenceId())
                 .seatNumber(seat.getSeatNumber())
-                .seatType(seat.getSeatType())
+                .seatType(seat.getSeatType().name())
                 .isAvailable(seat.getIsAvailable())
                 .isLadiesSeat(seat.getIsLadiesSeat())
                 .fareMultiplier(seat.getFareMultiplier())

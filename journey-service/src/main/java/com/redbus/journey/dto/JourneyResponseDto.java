@@ -32,4 +32,9 @@ public class JourneyResponseDto {
     private Integer estimatedDurationMinutes;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    
+    // Additional getters for compatibility
+    public Boolean getIsActive() {
+        return isActive;
+    }
 }
