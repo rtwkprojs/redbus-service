@@ -1,0 +1,994 @@
+2025-09-28T11:53:34.522+05:30  INFO 60250 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 60250 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:53:34.523+05:30 DEBUG 60250 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:53:34.523+05:30  INFO 60250 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:53:34.865+05:30  INFO 60250 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:53:34.894+05:30  INFO 60250 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:53:35.122+05:30  INFO 60250 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:53:35.128+05:30  INFO 60250 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:53:35.129+05:30  INFO 60250 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:53:35.156+05:30  INFO 60250 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:53:35.157+05:30  INFO 60250 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 616 ms
+2025-09-28T11:53:35.213+05:30  INFO 60250 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:53:35.326+05:30  INFO 60250 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5190010f
+2025-09-28T11:53:35.327+05:30  INFO 60250 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:53:35.366+05:30  INFO 60250 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-09-28T11:53:35.367+05:30  INFO 60250 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-09-28T11:53:35.367+05:30  INFO 60250 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : 
+2025-09-28T11:53:35.377+05:30  INFO 60250 --- [journey-service] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/redbus (PostgreSQL 15.14)
+2025-09-28T11:53:35.417+05:30  WARN 60250 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2025-09-28T11:53:35.417+05:30  INFO 60250 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:53:35.419+05:30  INFO 60250 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:53:35.420+05:30  INFO 60250 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:53:35.425+05:30  INFO 60250 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:53:35.432+05:30 ERROR 60250 --- [journey-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.10.jar:3.4.10]
+	at com.redbus.journey.JourneyServiceApplication.main(JourneyServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:146) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.10.jar:3.4.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 17 common frames omitted
+
+2025-09-28T11:54:03.778+05:30  INFO 60922 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 60922 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:54:03.778+05:30 DEBUG 60922 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:54:03.779+05:30  INFO 60922 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:54:04.056+05:30  INFO 60922 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:54:04.087+05:30  INFO 60922 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:54:04.302+05:30  INFO 60922 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:54:04.308+05:30  INFO 60922 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:54:04.308+05:30  INFO 60922 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:54:04.334+05:30  INFO 60922 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:54:04.334+05:30  INFO 60922 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
+2025-09-28T11:54:04.392+05:30  INFO 60922 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:54:04.487+05:30  INFO 60922 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f238e4f
+2025-09-28T11:54:04.488+05:30  INFO 60922 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:54:04.527+05:30  INFO 60922 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-09-28T11:54:04.527+05:30  INFO 60922 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-09-28T11:54:04.527+05:30  INFO 60922 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : 
+2025-09-28T11:54:04.535+05:30  INFO 60922 --- [journey-service] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/redbus (PostgreSQL 15.14)
+2025-09-28T11:54:04.576+05:30  WARN 60922 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2025-09-28T11:54:04.577+05:30  INFO 60922 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:54:04.578+05:30  INFO 60922 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:54:04.579+05:30  INFO 60922 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:54:04.585+05:30  INFO 60922 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:54:04.591+05:30 ERROR 60922 --- [journey-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.10.jar:3.4.10]
+	at com.redbus.journey.JourneyServiceApplication.main(JourneyServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:146) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.10.jar:3.4.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 17 common frames omitted
+
+2025-09-28T11:54:28.998+05:30  INFO 61609 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 61609 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:54:28.999+05:30 DEBUG 61609 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:54:28.999+05:30  INFO 61609 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:54:29.267+05:30  INFO 61609 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:54:29.292+05:30  INFO 61609 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:54:29.502+05:30  INFO 61609 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:54:29.508+05:30  INFO 61609 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:54:29.508+05:30  INFO 61609 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:54:29.535+05:30  INFO 61609 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:54:29.535+05:30  INFO 61609 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 519 ms
+2025-09-28T11:54:29.597+05:30  INFO 61609 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:54:29.714+05:30  INFO 61609 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f4596d0
+2025-09-28T11:54:29.714+05:30  INFO 61609 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:54:29.753+05:30  INFO 61609 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-09-28T11:54:29.753+05:30  INFO 61609 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-09-28T11:54:29.753+05:30  INFO 61609 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : 
+2025-09-28T11:54:29.761+05:30  INFO 61609 --- [journey-service] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/redbus (PostgreSQL 15.14)
+2025-09-28T11:54:29.801+05:30  WARN 61609 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2025-09-28T11:54:29.801+05:30  INFO 61609 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:54:29.803+05:30  INFO 61609 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:54:29.804+05:30  INFO 61609 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:54:29.809+05:30  INFO 61609 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:54:29.816+05:30 ERROR 61609 --- [journey-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.10.jar:3.4.10]
+	at com.redbus.journey.JourneyServiceApplication.main(JourneyServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:146) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.10.jar:3.4.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 17 common frames omitted
+
+2025-09-28T11:55:06.174+05:30  INFO 62526 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 62526 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:55:06.175+05:30 DEBUG 62526 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:55:06.175+05:30  INFO 62526 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:55:06.457+05:30  INFO 62526 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:55:06.481+05:30  INFO 62526 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:55:06.698+05:30  INFO 62526 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:55:06.704+05:30  INFO 62526 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:55:06.704+05:30  INFO 62526 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:55:06.729+05:30  INFO 62526 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:55:06.729+05:30  INFO 62526 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 536 ms
+2025-09-28T11:55:06.790+05:30  INFO 62526 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:55:06.886+05:30  INFO 62526 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29bcf51d
+2025-09-28T11:55:06.887+05:30  INFO 62526 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:55:06.924+05:30  INFO 62526 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-09-28T11:55:06.924+05:30  INFO 62526 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-09-28T11:55:06.924+05:30  INFO 62526 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : 
+2025-09-28T11:55:06.932+05:30  INFO 62526 --- [journey-service] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/redbus (PostgreSQL 15.14)
+2025-09-28T11:55:06.965+05:30  WARN 62526 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2025-09-28T11:55:06.965+05:30  INFO 62526 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:55:06.966+05:30  INFO 62526 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:55:06.967+05:30  INFO 62526 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:55:06.973+05:30  INFO 62526 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:55:06.979+05:30 ERROR 62526 --- [journey-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.10.jar:3.4.10]
+	at com.redbus.journey.JourneyServiceApplication.main(JourneyServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:146) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.10.jar:3.4.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 17 common frames omitted
+
+2025-09-28T11:56:05.024+05:30  INFO 63491 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 63491 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:56:05.025+05:30 DEBUG 63491 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:56:05.025+05:30  INFO 63491 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:56:05.360+05:30  INFO 63491 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:56:05.385+05:30  INFO 63491 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:56:05.601+05:30  INFO 63491 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:56:05.606+05:30  INFO 63491 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:56:05.606+05:30  INFO 63491 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:56:05.630+05:30  INFO 63491 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:56:05.630+05:30  INFO 63491 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 586 ms
+2025-09-28T11:56:05.684+05:30  INFO 63491 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:56:05.780+05:30  INFO 63491 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2da81754
+2025-09-28T11:56:05.781+05:30  INFO 63491 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:56:05.817+05:30  INFO 63491 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2025-09-28T11:56:05.817+05:30  INFO 63491 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2025-09-28T11:56:05.817+05:30  INFO 63491 --- [journey-service] [main] o.f.c.internal.license.VersionPrinter    : 
+2025-09-28T11:56:05.827+05:30  INFO 63491 --- [journey-service] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5433/redbus (PostgreSQL 15.14)
+2025-09-28T11:56:05.867+05:30  WARN 63491 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2025-09-28T11:56:05.867+05:30  INFO 63491 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:56:05.868+05:30  INFO 63491 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:56:05.870+05:30  INFO 63491 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:56:05.875+05:30  INFO 63491 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:56:05.882+05:30 ERROR 63491 --- [journey-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.10.jar:3.4.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.10.jar:3.4.10]
+	at com.redbus.journey.JourneyServiceApplication.main(JourneyServiceApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 4.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:146) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:213) ~[flyway-core-9.22.3.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.22.3.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.4.10.jar:3.4.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 17 common frames omitted
+
+2025-09-28T11:56:31.885+05:30  INFO 64011 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 64011 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:56:31.886+05:30 DEBUG 64011 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:56:31.886+05:30  INFO 64011 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:56:32.155+05:30  INFO 64011 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:56:32.180+05:30  INFO 64011 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:56:32.383+05:30  INFO 64011 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:56:32.389+05:30  INFO 64011 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:56:32.389+05:30  INFO 64011 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:56:32.413+05:30  INFO 64011 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:56:32.413+05:30  INFO 64011 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
+2025-09-28T11:56:32.494+05:30  INFO 64011 --- [journey-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T11:56:32.532+05:30  INFO 64011 --- [journey-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28T11:56:32.549+05:30  INFO 64011 --- [journey-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T11:56:32.682+05:30  INFO 64011 --- [journey-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T11:56:32.701+05:30  INFO 64011 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:56:32.804+05:30  INFO 64011 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68e24e7
+2025-09-28T11:56:32.805+05:30  INFO 64011 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:56:32.829+05:30  WARN 64011 --- [journey-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T11:56:32.840+05:30  INFO 64011 --- [journey-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28T11:56:32.843+05:30 DEBUG 64011 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@77e9dca8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@fcd0e8d)
+2025-09-28T11:56:32.843+05:30 DEBUG 64011 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4e4d0a0b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a4083f6)
+2025-09-28T11:56:33.318+05:30  INFO 64011 --- [journey-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T11:56:33.324+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-09-28T11:56:33.326+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       drop constraint if exists FK42eje5dvqvqfq318n8x9lf5xw
+2025-09-28T11:56:33.327+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FK63y33daxb1qs5nbnkuicbpkej
+2025-09-28T11:56:33.328+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FKjmssq6w9xpsvupp2x407s43i2
+2025-09-28T11:56:33.329+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       drop constraint if exists FK9o9a4w8me71q9sh9qnn5uh9y4
+2025-09-28T11:56:33.330+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists journeys cascade
+2025-09-28T11:56:33.331+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists route_stops cascade
+2025-09-28T11:56:33.332+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists routes cascade
+2025-09-28T11:56:33.332+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists seat_inventory cascade
+2025-09-28T11:56:33.333+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists stops cascade
+2025-09-28T11:56:33.336+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table journeys (
+        available_seats integer not null,
+        base_fare float(53) not null,
+        is_active boolean not null,
+        total_seats integer not null,
+        arrival_time timestamp(6) not null,
+        created_at timestamp(6) not null,
+        departure_time timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        journey_code varchar(20) not null unique,
+        journey_status varchar(20) not null check (journey_status in ('SCHEDULED','BOARDING','DEPARTED','IN_TRANSIT','ARRIVED','COMPLETED','CANCELLED','DELAYED')),
+        amenities varchar(500),
+        vehicle_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T11:56:33.351+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table route_stops (
+        arrival_time_offset_minutes integer not null,
+        departure_time_offset_minutes integer not null,
+        distance_from_previous_km integer,
+        fare_from_origin float(53),
+        is_boarding_point boolean not null,
+        is_dropping_point boolean not null,
+        stop_sequence integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        stop_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        primary key (id),
+        unique (route_id, stop_sequence)
+    )
+2025-09-28T11:56:33.357+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table routes (
+        base_fare float(53) not null,
+        distance_km integer not null,
+        estimated_duration_minutes integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        destination_city varchar(100) not null,
+        source_city varchar(100) not null,
+        route_name varchar(200) not null,
+        agency_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T11:56:33.363+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table seat_inventory (
+        fare_multiplier float(53) not null,
+        is_available boolean not null,
+        is_ladies_seat boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        journey_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        seat_number varchar(10) not null,
+        reference_id uuid not null unique,
+        seat_type varchar(20) not null check (seat_type in ('LOWER','UPPER','SEATER','SLEEPER','SEMI_SLEEPER')),
+        booking_reference_id varchar(255),
+        primary key (id),
+        unique (journey_id, seat_number)
+    )
+2025-09-28T11:56:33.369+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table stops (
+        is_active boolean not null,
+        latitude float(53),
+        longitude float(53),
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        city varchar(100) not null,
+        landmark varchar(100),
+        state varchar(100) not null,
+        stop_name varchar(100) not null,
+        address varchar(200),
+        primary key (id)
+    )
+2025-09-28T11:56:33.374+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       add constraint FK42eje5dvqvqfq318n8x9lf5xw 
+       foreign key (route_id) 
+       references routes
+2025-09-28T11:56:33.376+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FK63y33daxb1qs5nbnkuicbpkej 
+       foreign key (route_id) 
+       references routes
+2025-09-28T11:56:33.378+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FKjmssq6w9xpsvupp2x407s43i2 
+       foreign key (stop_id) 
+       references stops
+2025-09-28T11:56:33.379+05:30 DEBUG 64011 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       add constraint FK9o9a4w8me71q9sh9qnn5uh9y4 
+       foreign key (journey_id) 
+       references journeys
+2025-09-28T11:56:33.382+05:30  INFO 64011 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T11:56:33.568+05:30  INFO 64011 --- [journey-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T11:56:33.828+05:30  WARN 64011 --- [journey-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T11:56:33.871+05:30 DEBUG 64011 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-09-28T11:56:33.909+05:30 DEBUG 64011 --- [journey-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-28T11:56:33.924+05:30 DEBUG 64011 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-28T11:56:33.947+05:30 DEBUG 64011 --- [journey-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-28T11:56:34.016+05:30  WARN 64011 --- [journey-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaListenerContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/kafka/KafkaAnnotationDrivenConfiguration.class]: Failed to instantiate [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory]: Factory method 'kafkaListenerContainerFactory' threw exception with message: 'void org.springframework.kafka.listener.ContainerProperties.setKafkaAwareTransactionManager(org.springframework.kafka.transaction.KafkaAwareTransactionManager)'
+2025-09-28T11:56:34.017+05:30  INFO 64011 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T11:56:34.018+05:30  INFO 64011 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:56:34.019+05:30  INFO 64011 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T11:56:34.020+05:30  INFO 64011 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-28T11:56:34.026+05:30  INFO 64011 --- [journey-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-28T11:56:34.033+05:30 ERROR 64011 --- [journey-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer.configureContainer(ConcurrentKafkaListenerContainerFactoryConfigurer.java:245)
+
+The following method did not exist:
+
+    'void org.springframework.kafka.listener.ContainerProperties.setKafkaAwareTransactionManager(org.springframework.kafka.transaction.KafkaAwareTransactionManager)'
+
+The calling method's class, org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer, was loaded from the following location:
+
+    jar:file:/Users/sairithwik/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.10/spring-boot-autoconfigure-3.4.10.jar!/org/springframework/boot/autoconfigure/kafka/ConcurrentKafkaListenerContainerFactoryConfigurer.class
+
+The called method's class, org.springframework.kafka.listener.ContainerProperties, is available from the following locations:
+
+    jar:file:/Users/sairithwik/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar!/org/springframework/kafka/listener/ContainerProperties.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springframework.kafka.listener.ContainerProperties: file:/Users/sairithwik/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar
+    org.springframework.kafka.listener.ConsumerProperties: file:/Users/sairithwik/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer and org.springframework.kafka.listener.ContainerProperties
+
+2025-09-28T11:57:20.925+05:30  INFO 64686 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 64686 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T11:57:20.926+05:30 DEBUG 64686 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T11:57:20.927+05:30  INFO 64686 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T11:57:21.188+05:30  INFO 64686 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T11:57:21.213+05:30  INFO 64686 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-09-28T11:57:21.403+05:30  INFO 64686 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T11:57:21.409+05:30  INFO 64686 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T11:57:21.409+05:30  INFO 64686 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T11:57:21.433+05:30  INFO 64686 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T11:57:21.434+05:30  INFO 64686 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2025-09-28T11:57:21.504+05:30  INFO 64686 --- [journey-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T11:57:21.537+05:30  INFO 64686 --- [journey-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28T11:57:21.557+05:30  INFO 64686 --- [journey-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T11:57:21.682+05:30  INFO 64686 --- [journey-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T11:57:21.697+05:30  INFO 64686 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T11:57:21.803+05:30  INFO 64686 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18026052
+2025-09-28T11:57:21.804+05:30  INFO 64686 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T11:57:21.825+05:30  WARN 64686 --- [journey-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T11:57:21.836+05:30  INFO 64686 --- [journey-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28T11:57:21.839+05:30 DEBUG 64686 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@d28c214) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2fc7fa6e)
+2025-09-28T11:57:21.839+05:30 DEBUG 64686 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7f8c48f3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@273dec10)
+2025-09-28T11:57:22.315+05:30  INFO 64686 --- [journey-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T11:57:22.322+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-09-28T11:57:22.325+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       drop constraint if exists FK42eje5dvqvqfq318n8x9lf5xw
+2025-09-28T11:57:22.337+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FK63y33daxb1qs5nbnkuicbpkej
+2025-09-28T11:57:22.340+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FKjmssq6w9xpsvupp2x407s43i2
+2025-09-28T11:57:22.343+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       drop constraint if exists FK9o9a4w8me71q9sh9qnn5uh9y4
+2025-09-28T11:57:22.347+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists journeys cascade
+2025-09-28T11:57:22.355+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists route_stops cascade
+2025-09-28T11:57:22.358+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists routes cascade
+2025-09-28T11:57:22.361+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists seat_inventory cascade
+2025-09-28T11:57:22.363+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists stops cascade
+2025-09-28T11:57:22.368+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table journeys (
+        available_seats integer not null,
+        base_fare float(53) not null,
+        is_active boolean not null,
+        total_seats integer not null,
+        arrival_time timestamp(6) not null,
+        created_at timestamp(6) not null,
+        departure_time timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        journey_code varchar(20) not null unique,
+        journey_status varchar(20) not null check (journey_status in ('SCHEDULED','BOARDING','DEPARTED','IN_TRANSIT','ARRIVED','COMPLETED','CANCELLED','DELAYED')),
+        amenities varchar(500),
+        vehicle_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T11:57:22.380+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table route_stops (
+        arrival_time_offset_minutes integer not null,
+        departure_time_offset_minutes integer not null,
+        distance_from_previous_km integer,
+        fare_from_origin float(53),
+        is_boarding_point boolean not null,
+        is_dropping_point boolean not null,
+        stop_sequence integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        stop_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        primary key (id),
+        unique (route_id, stop_sequence)
+    )
+2025-09-28T11:57:22.386+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table routes (
+        base_fare float(53) not null,
+        distance_km integer not null,
+        estimated_duration_minutes integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        destination_city varchar(100) not null,
+        source_city varchar(100) not null,
+        route_name varchar(200) not null,
+        agency_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T11:57:22.390+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table seat_inventory (
+        fare_multiplier float(53) not null,
+        is_available boolean not null,
+        is_ladies_seat boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        journey_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        seat_number varchar(10) not null,
+        reference_id uuid not null unique,
+        seat_type varchar(20) not null check (seat_type in ('LOWER','UPPER','SEATER','SLEEPER','SEMI_SLEEPER')),
+        booking_reference_id varchar(255),
+        primary key (id),
+        unique (journey_id, seat_number)
+    )
+2025-09-28T11:57:22.397+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table stops (
+        is_active boolean not null,
+        latitude float(53),
+        longitude float(53),
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        city varchar(100) not null,
+        landmark varchar(100),
+        state varchar(100) not null,
+        stop_name varchar(100) not null,
+        address varchar(200),
+        primary key (id)
+    )
+2025-09-28T11:57:22.402+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       add constraint FK42eje5dvqvqfq318n8x9lf5xw 
+       foreign key (route_id) 
+       references routes
+2025-09-28T11:57:22.405+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FK63y33daxb1qs5nbnkuicbpkej 
+       foreign key (route_id) 
+       references routes
+2025-09-28T11:57:22.406+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FKjmssq6w9xpsvupp2x407s43i2 
+       foreign key (stop_id) 
+       references stops
+2025-09-28T11:57:22.408+05:30 DEBUG 64686 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       add constraint FK9o9a4w8me71q9sh9qnn5uh9y4 
+       foreign key (journey_id) 
+       references journeys
+2025-09-28T11:57:22.412+05:30  INFO 64686 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T11:57:22.595+05:30  INFO 64686 --- [journey-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T11:57:22.836+05:30  WARN 64686 --- [journey-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T11:57:22.877+05:30 DEBUG 64686 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-09-28T11:57:22.912+05:30 DEBUG 64686 --- [journey-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-28T11:57:22.926+05:30 DEBUG 64686 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-28T11:57:22.947+05:30 DEBUG 64686 --- [journey-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-28T11:57:23.001+05:30  INFO 64686 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-09-28T11:57:23.006+05:30  INFO 64686 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Started JourneyServiceApplication in 2.282 seconds (process running for 2.42)
+2025-09-28T11:58:52.988+05:30  INFO 64686 --- [journey-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-28T11:58:52.992+05:30  INFO 64686 --- [journey-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-28T11:58:52.994+05:30  INFO 64686 --- [journey-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T11:58:52.996+05:30  INFO 64686 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T11:58:52.997+05:30  INFO 64686 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-28T12:16:45.989+05:30  INFO 75252 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Starting JourneyServiceApplication using Java 17.0.10 with PID 75252 (/Users/sairithwik/Downloads/core/journey-service/target/classes started by sairithwik in /Users/sairithwik/Downloads/core/journey-service)
+2025-09-28T12:16:45.990+05:30 DEBUG 75252 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Running with Spring Boot v3.4.10, Spring v6.2.11
+2025-09-28T12:16:45.990+05:30  INFO 75252 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-09-28T12:16:46.262+05:30  INFO 75252 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28T12:16:46.288+05:30  INFO 75252 --- [journey-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2025-09-28T12:16:46.471+05:30  INFO 75252 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-09-28T12:16:46.477+05:30  INFO 75252 --- [journey-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-28T12:16:46.477+05:30  INFO 75252 --- [journey-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28T12:16:46.500+05:30  INFO 75252 --- [journey-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-28T12:16:46.500+05:30  INFO 75252 --- [journey-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 493 ms
+2025-09-28T12:16:46.579+05:30  INFO 75252 --- [journey-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28T12:16:46.611+05:30  INFO 75252 --- [journey-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28T12:16:46.630+05:30  INFO 75252 --- [journey-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-28T12:16:46.758+05:30  INFO 75252 --- [journey-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28T12:16:46.772+05:30  INFO 75252 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-28T12:16:46.872+05:30  INFO 75252 --- [journey-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1682e6a
+2025-09-28T12:16:46.873+05:30  INFO 75252 --- [journey-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-28T12:16:46.896+05:30  WARN 75252 --- [journey-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-28T12:16:46.908+05:30  INFO 75252 --- [journey-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28T12:16:46.911+05:30 DEBUG 75252 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@67b5e613) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6fc1a8f6)
+2025-09-28T12:16:46.911+05:30 DEBUG 75252 --- [journey-service] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3095d401) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2037f12b)
+2025-09-28T12:16:47.405+05:30  INFO 75252 --- [journey-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28T12:16:47.412+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    set client_min_messages = WARNING
+2025-09-28T12:16:47.415+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       drop constraint if exists FK42eje5dvqvqfq318n8x9lf5xw
+2025-09-28T12:16:47.424+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FK63y33daxb1qs5nbnkuicbpkej
+2025-09-28T12:16:47.427+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       drop constraint if exists FKjmssq6w9xpsvupp2x407s43i2
+2025-09-28T12:16:47.430+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       drop constraint if exists FK9o9a4w8me71q9sh9qnn5uh9y4
+2025-09-28T12:16:47.433+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists journeys cascade
+2025-09-28T12:16:47.443+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists route_stops cascade
+2025-09-28T12:16:47.450+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists routes cascade
+2025-09-28T12:16:47.454+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists seat_inventory cascade
+2025-09-28T12:16:47.456+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    drop table if exists stops cascade
+2025-09-28T12:16:47.461+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table journeys (
+        available_seats integer not null,
+        base_fare float(53) not null,
+        is_active boolean not null,
+        total_seats integer not null,
+        arrival_time timestamp(6) not null,
+        created_at timestamp(6) not null,
+        departure_time timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        journey_code varchar(20) not null unique,
+        journey_status varchar(20) not null check (journey_status in ('SCHEDULED','BOARDING','DEPARTED','IN_TRANSIT','ARRIVED','COMPLETED','CANCELLED','DELAYED')),
+        amenities varchar(500),
+        vehicle_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:16:47.476+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table route_stops (
+        arrival_time_offset_minutes integer not null,
+        departure_time_offset_minutes integer not null,
+        distance_from_previous_km integer,
+        fare_from_origin float(53),
+        is_boarding_point boolean not null,
+        is_dropping_point boolean not null,
+        stop_sequence integer not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        route_id bigint not null,
+        stop_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        primary key (id),
+        unique (route_id, stop_sequence)
+    )
+2025-09-28T12:16:47.481+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table routes (
+        base_fare float(53) not null,
+        distance_km integer not null,
+        estimated_duration_minutes integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        destination_city varchar(100) not null,
+        source_city varchar(100) not null,
+        route_name varchar(200) not null,
+        agency_reference_id varchar(255) not null,
+        primary key (id)
+    )
+2025-09-28T12:16:47.487+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table seat_inventory (
+        fare_multiplier float(53) not null,
+        is_available boolean not null,
+        is_ladies_seat boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        journey_id bigint not null,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        seat_number varchar(10) not null,
+        reference_id uuid not null unique,
+        seat_type varchar(20) not null check (seat_type in ('LOWER','UPPER','SEATER','SLEEPER','SEMI_SLEEPER')),
+        booking_reference_id varchar(255),
+        primary key (id),
+        unique (journey_id, seat_number)
+    )
+2025-09-28T12:16:47.491+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    create table stops (
+        is_active boolean not null,
+        latitude float(53),
+        longitude float(53),
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) not null,
+        version bigint not null,
+        reference_id uuid not null unique,
+        city varchar(100) not null,
+        landmark varchar(100),
+        state varchar(100) not null,
+        stop_name varchar(100) not null,
+        address varchar(200),
+        primary key (id)
+    )
+2025-09-28T12:16:47.497+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists journeys 
+       add constraint FK42eje5dvqvqfq318n8x9lf5xw 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:16:47.499+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FK63y33daxb1qs5nbnkuicbpkej 
+       foreign key (route_id) 
+       references routes
+2025-09-28T12:16:47.501+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists route_stops 
+       add constraint FKjmssq6w9xpsvupp2x407s43i2 
+       foreign key (stop_id) 
+       references stops
+2025-09-28T12:16:47.503+05:30 DEBUG 75252 --- [journey-service] [main] org.hibernate.SQL                        : 
+    alter table if exists seat_inventory 
+       add constraint FK9o9a4w8me71q9sh9qnn5uh9y4 
+       foreign key (journey_id) 
+       references journeys
+2025-09-28T12:16:47.506+05:30  INFO 75252 --- [journey-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:16:47.652+05:30  INFO 75252 --- [journey-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28T12:16:47.889+05:30  WARN 75252 --- [journey-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-28T12:16:47.930+05:30 DEBUG 75252 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-09-28T12:16:47.965+05:30 DEBUG 75252 --- [journey-service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-09-28T12:16:47.979+05:30 DEBUG 75252 --- [journey-service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-28T12:16:48.000+05:30 DEBUG 75252 --- [journey-service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-28T12:16:48.054+05:30  INFO 75252 --- [journey-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-09-28T12:16:48.058+05:30  INFO 75252 --- [journey-service] [main] c.r.journey.JourneyServiceApplication    : Started JourneyServiceApplication in 2.274 seconds (process running for 2.415)
+2025-09-28T12:17:12.916+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28T12:17:12.916+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-28T12:17:12.916+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-09-28T12:17:12.916+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-09-28T12:17:12.916+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-09-28T12:17:12.917+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@11b5b1f2
+2025-09-28T12:17:12.917+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6eec564c
+2025-09-28T12:17:12.917+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-28T12:17:12.917+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-28T12:17:12.922+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/routes", parameters={}
+2025-09-28T12:17:12.927+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.RouteController#createRoute(RouteRequestDto)
+2025-09-28T12:17:12.979+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RouteRequestDto(routeName=Mumbai-Pune Express, sourceCity=Mumbai, destinationCity=Pune, distanceKm=1 (truncated)...]
+2025-09-28T12:17:12.999+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] c.r.journey.controller.RouteController   : Creating route: Mumbai-Pune Express
+2025-09-28T12:17:13.005+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] c.r.j.service.impl.RouteServiceImpl      : Creating route: Mumbai-Pune Express for agency: 47d9d5ef-2263-478a-9281-46f640f461ee
+2025-09-28T12:17:13.040+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.id 
+    from
+        routes r1_0 
+    where
+        r1_0.route_name=? 
+        and r1_0.agency_reference_id=? 
+    fetch
+        first ? rows only
+2025-09-28T12:17:13.078+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        routes
+        (agency_reference_id, base_fare, created_at, destination_city, distance_km, estimated_duration_minutes, is_active, reference_id, route_name, source_city, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28T12:17:13.087+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-1] c.r.j.service.impl.RouteServiceImpl      : Route created with referenceId: 2a8fb8ed-0784-42f0-9718-752330f18ade
+2025-09-28T12:17:13.106+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:17:13.110+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Route created successfully, data=RouteResponseDto(referenceId=2a8f (truncated)...]
+2025-09-28T12:17:13.118+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-09-28T12:17:19.374+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/v1/routes/2a8fb8ed-0784-42f0-9718-752330f18ade", parameters={}
+2025-09-28T12:17:19.375+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.redbus.journey.controller.RouteController#getRoute(UUID)
+2025-09-28T12:17:19.375+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-2] c.r.journey.controller.RouteController   : Fetching route: 2a8fb8ed-0784-42f0-9718-752330f18ade
+2025-09-28T12:17:19.378+05:30  INFO 75252 --- [journey-service] [http-nio-8083-exec-2] c.r.j.service.impl.RouteServiceImpl      : Fetching route: 2a8fb8ed-0784-42f0-9718-752330f18ade
+2025-09-28T12:17:19.382+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.id,
+        r1_0.agency_reference_id,
+        r1_0.base_fare,
+        r1_0.created_at,
+        r1_0.destination_city,
+        r1_0.distance_km,
+        r1_0.estimated_duration_minutes,
+        r1_0.is_active,
+        r1_0.reference_id,
+        r1_0.route_name,
+        r1_0.source_city,
+        r1_0.updated_at,
+        r1_0.version 
+    from
+        routes r1_0 
+    where
+        r1_0.reference_id=?
+2025-09-28T12:17:19.392+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] org.hibernate.SQL                        : 
+    select
+        rs1_0.route_id,
+        rs1_0.id,
+        rs1_0.arrival_time_offset_minutes,
+        rs1_0.created_at,
+        rs1_0.departure_time_offset_minutes,
+        rs1_0.distance_from_previous_km,
+        rs1_0.fare_from_origin,
+        rs1_0.is_boarding_point,
+        rs1_0.is_dropping_point,
+        rs1_0.reference_id,
+        rs1_0.stop_id,
+        rs1_0.stop_sequence,
+        rs1_0.updated_at,
+        rs1_0.version 
+    from
+        route_stops rs1_0 
+    where
+        rs1_0.route_id=? 
+    order by
+        rs1_0.stop_sequence
+2025-09-28T12:17:19.401+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-09-28T12:17:19.401+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=null, data=RouteResponseDto(referenceId=2a8fb8ed-0784-42f0-9718-75 (truncated)...]
+2025-09-28T12:17:19.402+05:30 DEBUG 75252 --- [journey-service] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-09-28T12:20:24.826+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-28T12:20:24.842+05:30  INFO 75252 --- [journey-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-28T12:20:24.857+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28T12:20:24.862+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-28T12:20:24.866+05:30  INFO 75252 --- [journey-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
