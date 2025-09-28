@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: search-service
+  
+  elasticsearch:
+    uris: ${ELASTICSEARCH_URI:http://localhost:9200}
+    connection-timeout: 5s
+    socket-timeout: 30s
+    
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+  
+  # Disable DataSource auto-configuration
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+server:
+  port: 8084
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_param
+    include-exception: false
+
+logging:
+  level:
+    root: INFO
+    com.redbus.search: DEBUG
+    org.springframework.data.elasticsearch: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/search-service.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

@@ -29,7 +29,6 @@ public class AgencyServiceImpl implements AgencyService {
     private final AgencyRepository agencyRepository;
     private final VehicleRepository vehicleRepository;
     
-    // Simple mapper methods until MapStruct issue is resolved
     private AgencyResponseDto toAgencyResponseDto(Agency agency) {
         return AgencyResponseDto.builder()
                 .referenceId(agency.getReferenceId())

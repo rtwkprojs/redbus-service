@@ -2,6 +2,7 @@ package com.redbus.payment.service.impl;
 
 import com.redbus.common.exception.BusinessException;
 import com.redbus.common.exception.ResourceNotFoundException;
+import com.redbus.payment.client.BookingServiceClient;
 import com.redbus.payment.dto.PaymentRequestDto;
 import com.redbus.payment.dto.PaymentResponseDto;
 import com.redbus.payment.entity.Payment;
@@ -26,6 +27,7 @@ import java.util.stream.Collectors;
 public class PaymentServiceImpl implements PaymentService {
     
     private final PaymentRepository paymentRepository;
+    private final BookingServiceClient bookingServiceClient;
     
     private static final String PAYMENT_CODE_PREFIX = "PAY";
     private static final double TOLERANCE = 0.01; // Allow 1 paisa tolerance for floating point comparison
@@ -171,10 +173,31 @@ public class PaymentServiceImpl implements PaymentService {
     }
     
     private void callBookingServiceCallback(Payment payment) {
-        // In a real implementation, this would call the Booking Service
-        // For now, we'll just log it
         log.info("Calling booking service callback for payment: {} with status: {}", 
                 payment.getPaymentCode(), payment.getPaymentStatus());
+        
+        try {
+            UUID bookingReferenceId = UUID.fromString(payment.getBookingReferenceId());
+            
+            if (payment.getPaymentStatus() == PaymentStatus.SUCCESS) {
+                // Confirm the booking
+                bookingServiceClient.confirmBookingPayment(
+                        bookingReferenceId,
+                        payment.getReferenceId().toString(),
+                        payment.getPaymentStatus().name(),
+                        payment.getAmountRequired()
+                );
+            } else if (payment.getPaymentStatus() == PaymentStatus.FAILED) {
+                // Cancel the booking due to payment failure
+                bookingServiceClient.cancelBookingPayment(
+                        bookingReferenceId,
+                        "Payment failed: " + payment.getFailureReason()
+                );
+            }
+        } catch (Exception e) {
+            log.error("Error calling booking service callback", e);
+            // In production, implement retry logic or use message queue
+        }
     }
     
     private PaymentResponseDto toPaymentResponseDto(Payment payment) {

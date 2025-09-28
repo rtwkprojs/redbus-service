@@ -4,8 +4,8 @@ spring:
   
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:redbus}
-    username: ${DB_USERNAME:redbus}
-    password: ${DB_PASSWORD:redbus123}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 20

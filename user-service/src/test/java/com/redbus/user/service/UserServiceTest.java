@@ -12,8 +12,8 @@ import com.redbus.user.mapper.UserMapper;
 import com.redbus.user.repository.UserRepository;
 import com.redbus.user.security.JwtService;
 import com.redbus.user.service.impl.UserServiceImpl;
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -30,7 +30,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class UserServiceTest {
+public class UserServiceTest {
     
     @Mock
     private UserRepository userRepository;
@@ -79,7 +79,7 @@ class UserServiceTest {
     }
     
     @Test
-    void registerUser_Success() {
+    public void registerUser_Success() {
         // Given
         when(userRepository.existsByUsername(anyString())).thenReturn(false);
         when(userRepository.existsByEmail(anyString())).thenReturn(false);
@@ -100,7 +100,7 @@ class UserServiceTest {
     }
     
     @Test
-    void registerUser_UsernameExists_ThrowsException() {
+    public void registerUser_UsernameExists_ThrowsException() {
         // Given
         when(userRepository.existsByUsername(anyString())).thenReturn(true);
         
@@ -113,7 +113,7 @@ class UserServiceTest {
     }
     
     @Test
-    void registerUser_EmailExists_ThrowsException() {
+    public void registerUser_EmailExists_ThrowsException() {
         // Given
         when(userRepository.existsByUsername(anyString())).thenReturn(false);
         when(userRepository.existsByEmail(anyString())).thenReturn(true);
@@ -127,7 +127,7 @@ class UserServiceTest {
     }
     
     @Test
-    void login_Success() {
+    public void login_Success() {
         // Given
         UserLoginDto loginDto = UserLoginDto.builder()
                 .usernameOrEmail("testuser")
@@ -154,7 +154,7 @@ class UserServiceTest {
     }
     
     @Test
-    void login_InvalidCredentials_ThrowsException() {
+    public void login_InvalidCredentials_ThrowsException() {
         // Given
         UserLoginDto loginDto = UserLoginDto.builder()
                 .usernameOrEmail("testuser")
@@ -173,7 +173,7 @@ class UserServiceTest {
     }
     
     @Test
-    void login_WrongPassword_ThrowsException() {
+    public void login_WrongPassword_ThrowsException() {
         // Given
         UserLoginDto loginDto = UserLoginDto.builder()
                 .usernameOrEmail("testuser")
@@ -193,7 +193,7 @@ class UserServiceTest {
     }
     
     @Test
-    void getUserByReferenceId_Success() {
+    public void getUserByReferenceId_Success() {
         // Given
         UUID referenceId = UUID.randomUUID();
         when(userRepository.findByReferenceId(referenceId)).thenReturn(Optional.of(user));
@@ -208,7 +208,7 @@ class UserServiceTest {
     }
     
     @Test
-    void existsByUsername_ReturnsTrue() {
+    public void existsByUsername_ReturnsTrue() {
         // Given
         when(userRepository.existsByUsername("testuser")).thenReturn(true);
         
@@ -221,7 +221,7 @@ class UserServiceTest {
     }
     
     @Test
-    void existsByEmail_ReturnsFalse() {
+    public void existsByEmail_ReturnsFalse() {
         // Given
         when(userRepository.existsByEmail("test@example.com")).thenReturn(false);
         

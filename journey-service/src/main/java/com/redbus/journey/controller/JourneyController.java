@@ -3,7 +3,6 @@ package com.redbus.journey.controller;
 import com.redbus.common.dto.ApiResponse;
 import com.redbus.journey.dto.JourneyRequestDto;
 import com.redbus.journey.dto.JourneyResponseDto;
-import com.redbus.journey.dto.SeatInventoryDto;
 import com.redbus.journey.enums.JourneyStatus;
 import com.redbus.journey.service.JourneyService;
 import jakarta.validation.Valid;
@@ -85,13 +84,8 @@ public class JourneyController {
         return ResponseEntity.ok(ApiResponse.success(journeys));
     }
     
-    @GetMapping("/{referenceId}/seats")
-    public ResponseEntity<ApiResponse<List<SeatInventoryDto>>> getJourneySeatInventory(
-            @PathVariable UUID referenceId) {
-        log.info("Fetching seat inventory for journey: {}", referenceId);
-        List<SeatInventoryDto> seats = journeyService.getJourneySeatInventory(referenceId);
-        return ResponseEntity.ok(ApiResponse.success(seats));
-    }
+    // Seat inventory endpoint moved to SeatManagementController to avoid ambiguity
+    // Use GET /api/v1/journeys/{journeyReferenceId}/seats instead
     
     @PostMapping("/{referenceId}/status")
     public ResponseEntity<ApiResponse<Void>> updateJourneyStatus(
