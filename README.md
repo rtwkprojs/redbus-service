@@ -1,7 +1,7 @@
 # RedBus - Bus Booking System
 
-Architecture Plan
-https://docs.google.com/document/d/1_mpcazFbCPB8nM-c_hjhbnwDTgyHA6wXv8Cvv75WUk0/edit?usp=sharing
+- [Architecture Plan](https://docs.google.com/document/d/1_mpcazFbCPB8nM-c_hjhbnwDTgyHA6wXv8Cvv75WUk0/edit?usp=sharing)
+- [API Documentation](https://github.com/rtwkprojs/redbus-service/blob/main/API_DOCUMENTATION.md)
 
 ## Architecture
 
@@ -66,38 +66,6 @@ cd payment-service && mvn spring-boot:run
 ```bash
 ./load-test-data.sh
 ```
-
-## API Documentation
-
-### User Service (Port 8081)
-- `POST /api/v1/auth/register` - Register new user
-- `POST /api/v1/auth/login` - User login
-- `GET /api/v1/users/profile` - Get user profile
-- `PUT /api/v1/users/profile` - Update profile
-
-### Agency Service (Port 8082)
-- `POST /api/v1/agencies` - Create agency
-- `GET /api/v1/agencies/{id}` - Get agency details
-- `POST /api/v1/agencies/{id}/vehicles` - Add vehicle
-- `GET /api/v1/agencies/{id}/vehicles` - List vehicles
-
-### Journey Service (Port 8083)
-- `POST /api/v1/routes` - Create route
-- `POST /api/v1/stops` - Create stop
-- `POST /api/v1/journeys` - Schedule journey
-- `GET /api/v1/journeys/search` - Search journeys
-- `GET /api/v1/journeys/{id}/seats` - Get seat inventory
-
-### Booking Service (Port 8084)
-- `POST /api/v1/bookings/initiate` - Initiate booking
-- `POST /api/v1/bookings/{id}/confirm` - Confirm booking
-- `POST /api/v1/bookings/{id}/cancel` - Cancel booking
-- `GET /api/v1/bookings/{id}` - Get booking details
-
-### Payment Service (Port 8086)
-- `POST /api/v1/payments/process` - Process payment
-- `GET /api/v1/payments/{id}` - Get payment details
-- `POST /api/v1/payments/{id}/refund` - Initiate refund
 
 ## Testing
 
